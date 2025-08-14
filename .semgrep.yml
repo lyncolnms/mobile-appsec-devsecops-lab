@@ -1,0 +1,24 @@
+# Regras Semgrep base para C#/.NET e segurança em APIs
+# Ajuste conforme seu contexto; você pode adicionar regras específicas para MAUI.
+# Documentação: https://semgrep.dev/docs/
+# Use também rulesets oficiais: p/owasp-top-ten, p/secrets, csharp
+rules:
+  - id: insecure-random
+    patterns:
+      - pattern: new System.Random()
+    message: Use RNGCryptoServiceProvider/RandomNumberGenerator para fins criptográficos.
+    languages: [csharp]
+    severity: WARNING
+
+  - id: hardcoded-secret
+    pattern-either:
+      - pattern: string $S = "...";
+    message: Possível segredo hardcoded. Use SecureStorage/Keychain/Keystore e variáveis de ambiente no build.
+    languages: [csharp]
+    severity: WARNING
+
+  - id: insecure-http
+    pattern: new System.Net.Http.HttpClient()
+    message: Evite HTTP sem TLS; implemente pinning de certificado/SPKI para endpoints sensíveis.
+    languages: [csharp]
+    severity: INFO

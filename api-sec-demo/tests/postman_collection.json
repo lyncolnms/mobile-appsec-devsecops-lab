@@ -1,0 +1,33 @@
+{
+  "info": {
+    "name": "Mobile API Demo",
+    "_postman_id": "00000000-0000-0000-0000-000000000000",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": { "raw": "http://localhost:8080/auth/login", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["auth","login"] },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"code\": \"SAMPLE\",\n  \"code_verifier\": \"SAMPLE\"\n}"
+        }
+      }
+    },
+    {
+      "name": "List Notes (Potential BOLA)",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{access_token}}" }
+        ],
+        "url": { "raw": "http://localhost:8080/users/{{userId}}/notes", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["users","{{userId}}","notes"] }
+      }
+    }
+  ]
+}
