@@ -27,5 +27,4 @@ Avisos
 - Realize testes apenas em apps/ambientes sob sua autorização.
 - Sanitize dados antes de publicar relatórios/write-ups.
 
-Licença
-- MIT (ajuste conforme sua necessidade).
+Licença - MIT (ajuste conforme sua necessidade)
