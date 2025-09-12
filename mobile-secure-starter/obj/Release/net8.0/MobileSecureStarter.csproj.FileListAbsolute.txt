@@ -1,0 +1,13 @@
+/home/runner/work/mobile-appsec-devsecops-lab/mobile-appsec-devsecops-lab/mobile-secure-starter/obj/Release/net8.0/MobileSecureStarter.csproj.AssemblyReference.cache
+/home/runner/work/mobile-appsec-devsecops-lab/mobile-appsec-devsecops-lab/mobile-secure-starter/obj/Release/net8.0/MobileSecureStarter.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/mobile-appsec-devsecops-lab/mobile-appsec-devsecops-lab/mobile-secure-starter/obj/Release/net8.0/MobileSecureStarter.csproj.CoreCompileInputs.cache
+/home/runner/work/mobile-appsec-devsecops-lab/mobile-appsec-devsecops-lab/mobile-secure-starter/obj/Release/net8.0/MobileSecureStarter.sourcelink.json
+/home/runner/work/mobile-appsec-devsecops-lab/mobile-appsec-devsecops-lab/mobile-secure-starter/obj/Release/net8.0/MobileSecureStarter.AssemblyInfoInputs.cache
+/home/runner/work/mobile-appsec-devsecops-lab/mobile-appsec-devsecops-lab/mobile-secure-starter/obj/Release/net8.0/MobileSecureStarter.AssemblyInfo.cs
+/home/runner/work/mobile-appsec-devsecops-lab/mobile-appsec-devsecops-lab/mobile-secure-starter/bin/Release/net8.0/MobileSecureStarter.deps.json
+/home/runner/work/mobile-appsec-devsecops-lab/mobile-appsec-devsecops-lab/mobile-secure-starter/bin/Release/net8.0/MobileSecureStarter.dll
+/home/runner/work/mobile-appsec-devsecops-lab/mobile-appsec-devsecops-lab/mobile-secure-starter/bin/Release/net8.0/MobileSecureStarter.pdb
+/home/runner/work/mobile-appsec-devsecops-lab/mobile-appsec-devsecops-lab/mobile-secure-starter/obj/Release/net8.0/MobileSecureStarter.dll
+/home/runner/work/mobile-appsec-devsecops-lab/mobile-appsec-devsecops-lab/mobile-secure-starter/obj/Release/net8.0/refint/MobileSecureStarter.dll
+/home/runner/work/mobile-appsec-devsecops-lab/mobile-appsec-devsecops-lab/mobile-secure-starter/obj/Release/net8.0/MobileSecureStarter.pdb
+/home/runner/work/mobile-appsec-devsecops-lab/mobile-appsec-devsecops-lab/mobile-secure-starter/obj/Release/net8.0/ref/MobileSecureStarter.dll

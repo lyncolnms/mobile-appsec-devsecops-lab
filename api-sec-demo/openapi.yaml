@@ -1,3 +1,4 @@
+---
 openapi: 3.0.3
 info:
   title: Mobile API Demo
@@ -27,8 +28,8 @@ paths:
               schema:
                 type: object
                 properties:
-                  access_token: { type: string }
-                  refresh_token: { type: string }
+                  access_token: {type: string}
+                  refresh_token: {type: string}
   /users/{userId}/notes:
     get:
       summary: List notes for user
@@ -36,7 +37,7 @@ paths:
         - name: userId
           in: path
           required: true
-          schema: { type: string }
+          schema: {type: string}
       responses:
         "200":
           description: OK
@@ -47,9 +48,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    id: { type: string }
-                    ownerId: { type: string }
-                    content: { type: string }
+                    id: {type: string}
+                    ownerId: {type: string}
+                    content: {type: string}
       security:
         - bearerAuth: []
 components:
