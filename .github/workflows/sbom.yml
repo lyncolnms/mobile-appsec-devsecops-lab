@@ -1,8 +1,9 @@
+---
 name: SBOM (CycloneDX via Syft)
 
-on:
+"on":
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:

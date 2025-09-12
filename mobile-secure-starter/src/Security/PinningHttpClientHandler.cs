@@ -39,26 +39,28 @@ namespace MobileSecureStarter.Security
         private static string GetSpkiPin(X509Certificate2 cert)
         {
             byte[] spki;
-            using (var pubKey = cert.GetRSAPublicKey() as RSA ?? cert.GetECDsaPublicKey() as ECDsa)
+            var rsa = cert.GetRSAPublicKey();
+            if (rsa != null)
             {
-                if (pubKey == null) throw new InvalidOperationException("Chave pública não suportada.");
-                spki = SubjectPublicKeyInfo(pubKey);
+                spki = rsa.ExportSubjectPublicKeyInfo();
             }
+            else
+            {
+                var ecdsa = cert.GetECDsaPublicKey();
+                if (ecdsa != null)
+                {
+                    spki = ecdsa.ExportSubjectPublicKeyInfo();
+                }
+                else
+                {
+                    throw new InvalidOperationException("Chave pública não suportada.");
+                }
+            }
+            
             using var sha = SHA256.Create();
             var hash = sha.ComputeHash(spki);
             var b64 = Convert.ToBase64String(hash);
             return $"sha256/{b64}";
-        }
-
-        private static byte[] SubjectPublicKeyInfo(AsymmetricAlgorithm key)
-        {
-            // ExportSubjectPublicKeyInfo exige .NET 5+
-            return key switch
-            {
-                RSA rsa => rsa.ExportSubjectPublicKeyInfo(),
-                ECDsa ecdsa => ecdsa.ExportSubjectPublicKeyInfo(),
-                _ => throw new NotSupportedException("Algoritmo não suportado")
-            };
         }
     }
 }

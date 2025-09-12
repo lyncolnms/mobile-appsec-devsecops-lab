@@ -1,9 +1,10 @@
+---
 name: Semgrep
 
-on:
+"on":
   pull_request:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   semgrep:
